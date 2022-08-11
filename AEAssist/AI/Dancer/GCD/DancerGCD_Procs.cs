@@ -21,7 +21,9 @@ namespace AEAssist.AI.Dancer.GCD
             }
             
             if (!Core.Me.HasAura(AurasDefine.FlourishingSymmetry) &&
-                !Core.Me.HasAura(AurasDefine.FlourshingFlow))
+                !Core.Me.HasAura(AurasDefine.FlourshingFlow) &&
+                !Core.Me.HasAura(AurasDefine.SilkenFlow) &&
+                !Core.Me.HasAura(AurasDefine.SilkenSymmetry))
             {
                 return -1;
             }

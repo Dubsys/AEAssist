@@ -31,7 +31,7 @@ namespace AEAssist.AI.Dancer.Ability
             }
 
             var bdls = AIRoot.GetBattleData<BattleData>().lastGCDSpell;
-
+            /*
             if (Core.Me.HasAura(AurasDefine.FlourshingFlow) && (bdls != SpellsDefine.Fountainfall.GetSpellEntity() &&
                                                                 bdls != SpellsDefine.Bloodshower.GetSpellEntity()))
             {
@@ -43,7 +43,7 @@ namespace AEAssist.AI.Dancer.Ability
             {
                 return -2;
             }
-
+            */
             SpellEntity[] GCDsCanProc =
             {
                 SpellsDefine.Cascade.GetSpellEntity(),

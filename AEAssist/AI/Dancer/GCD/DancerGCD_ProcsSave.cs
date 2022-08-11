@@ -14,7 +14,9 @@ namespace AEAssist.AI.Dancer.GCD
                 return -10;
             }
             if (!Core.Me.HasAura(AurasDefine.FlourishingSymmetry) &&
-                !Core.Me.HasAura(AurasDefine.FlourshingFlow))
+                !Core.Me.HasAura(AurasDefine.FlourshingFlow) &&
+                !Core.Me.HasAura(AurasDefine.SilkenFlow) &&
+                !Core.Me.HasAura(AurasDefine.SilkenSymmetry))
             {
                 return -1;
             }
@@ -28,12 +30,16 @@ namespace AEAssist.AI.Dancer.GCD
             // if combo will drop after tech 
             // if combo will drop after standered stance
             if (Core.Me.HasAura(AurasDefine.FlourishingSymmetry) &&
-                !Core.Me.HasMyAuraWithTimeleft(AurasDefine.FlourishingSymmetry, 5000))
+                !Core.Me.HasMyAuraWithTimeleft(AurasDefine.FlourishingSymmetry, 5000) &&
+                Core.Me.HasAura(AurasDefine.SilkenSymmetry) &&
+                !Core.Me.HasMyAuraWithTimeleft(AurasDefine.SilkenSymmetry, 5000))
             {
                 return 1;
             }
             if (Core.Me.HasAura(AurasDefine.FlourshingFlow) &&
-                !Core.Me.HasMyAuraWithTimeleft(AurasDefine.FlourshingFlow, 5000))
+                !Core.Me.HasMyAuraWithTimeleft(AurasDefine.FlourshingFlow, 5000) &&
+                Core.Me.HasAura(AurasDefine.SilkenFlow) &&
+                !Core.Me.HasMyAuraWithTimeleft(AurasDefine.SilkenFlow, 5000))
             {
                 return 1;
             }
@@ -44,7 +50,7 @@ namespace AEAssist.AI.Dancer.GCD
         {
             var spell = SpellsDefine.ReverseCascade.GetSpellEntity();
 
-            if (Core.Me.HasAura(AurasDefine.FlourshingFlow))
+            if (Core.Me.HasAura(AurasDefine.FlourshingFlow) || Core.Me.HasAura(AurasDefine.SilkenFlow))
             {
                 if (TargetHelper.CheckNeedUseAOEByMe(5, 5, 2))
                 {

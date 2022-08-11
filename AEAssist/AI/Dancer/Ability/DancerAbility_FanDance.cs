@@ -45,7 +45,7 @@ namespace AEAssist.AI.Dancer.Ability
 
             if (ActionResourceManager.Dancer.FourFoldFeathers > 3)
             {
-                if (Core.Me.HasMyAura(AurasDefine.FlourishingSymmetry) || Core.Me.HasMyAura(AurasDefine.FlourshingFlow))
+                if (Core.Me.HasMyAura(AurasDefine.FlourishingSymmetry) || Core.Me.HasMyAura(AurasDefine.FlourshingFlow) || Core.Me.HasMyAura(AurasDefine.SilkenFlow) || Core.Me.HasMyAura(AurasDefine.SilkenSymmetry))
                 {
                     return 0;
                 }

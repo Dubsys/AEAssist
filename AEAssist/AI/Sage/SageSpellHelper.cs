@@ -561,6 +561,26 @@ namespace AEAssist.AI.Sage
             }
             return null;
         }
+        public static async Task<SpellEntity> CastEukrasianPrognosisTest()
+        {
+            //if (!SpellsDefine.EukrasianDiagnosis.IsUnlock()) return null;
+            //var spell = new SpellEntity(SpellsDefine.EukrasianDiagnosis, target as BattleCharacter);
+            //return await spell.DoGCD();
+            LogHelper.Debug("群盾2");
+            if (GroupHelper.InParty)
+            {
+                LogHelper.Debug("群盾");
+                var skillTarget = GroupHelper.CastableAlliesWithin15.Count(r => r.CurrentHealth > 0 && r.CurrentHealthPercent <= 75f && !r.HasAura(AurasDefine.EukrasianPrognosis));
+                if (skillTarget > 3)
+                {
+                    var spell = new SpellEntity(SpellsDefine.EukrasianPrognosis, Core.Me as BattleCharacter);
+                    await CastEukrasia();
+                    await spell.DoGCD();
+                }                
+            }
+            return null;
+        }
+
         public static float GetHealth(Character c)
         {
             return c.CurrentHealthPercent;
@@ -640,6 +660,7 @@ namespace AEAssist.AI.Sage
                         count++;
                 }
             }
+            await CastEukrasianPrognosis(Core.Me);
         }
     }
 }

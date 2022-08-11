@@ -16,9 +16,11 @@ namespace AEAssist.AI.Sage
         public void Init()
         {
             CountDownHandler.Instance.AddListener(15000, SageSpellHelper.PrePullEukrasianDiagnosisThreePeople);
+            //CountDownHandler.Instance.AddListener(6000, SageSpellHelper.CastEukrasianPrognosis());
             CountDownHandler.Instance.AddListener(2500, () =>
                 PotionHelper.UsePotion(SettingMgr.GetSetting<GeneralSettings>().MindPotionId));
             CountDownHandler.Instance.AddListener(1500, () => SageSpellHelper.GetDosis().DoGCD());
+            
             AEAssist.DataBinding.Instance.EarlyDecisionMode = SettingMgr.GetSetting<SageSettings>().EarlyDecisionMode;
             LogHelper.Info("EarlyDecisionMode: " + AEAssist.DataBinding.Instance.EarlyDecisionMode);
         }

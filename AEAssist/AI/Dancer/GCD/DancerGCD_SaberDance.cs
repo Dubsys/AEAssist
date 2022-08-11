@@ -37,8 +37,7 @@ namespace AEAssist.AI.Dancer.GCD
 
             if (AEAssist.DataBinding.Instance.UseFlourish)
             {
-                if (SpellsDefine.Flourish.AbilityCoolDownInNextXGCDsWindow(1) && (!Core.Me.HasMyAura(AurasDefine.FlourshingFlow) &&
-                                                                !Core.Me.HasMyAura(AurasDefine.FlourishingSymmetry)))
+                if (SpellsDefine.Flourish.AbilityCoolDownInNextXGCDsWindow(1))
                 {
                     return 1;
                 }

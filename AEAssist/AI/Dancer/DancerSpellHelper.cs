@@ -60,7 +60,7 @@ namespace AEAssist.AI.Dancer
 
         private static async Task<SpellEntity> UseProcSingleCombo(GameObject target)
         {
-            if (Core.Me.HasAura(AurasDefine.FlourshingFlow) || SpellsDefine.Flourish.RecentlyUsed())
+            if (Core.Me.HasAura(AurasDefine.FlourshingFlow) || SpellsDefine.Flourish.RecentlyUsed() || Core.Me.HasAura(AurasDefine.SilkenFlow))
             {
                 if (SpellsDefine.Fountainfall.IsUnlock())
                 {
@@ -83,7 +83,7 @@ namespace AEAssist.AI.Dancer
 
         private static async Task<SpellEntity> UseProcAOECombo(GameObject target)
         {
-            if (Core.Me.HasAura(AurasDefine.FlourshingFlow))
+            if (Core.Me.HasAura(AurasDefine.FlourshingFlow) || Core.Me.HasAura(AurasDefine.SilkenFlow))
             {
                 if (SpellsDefine.Bloodshower.IsUnlock())
                 {

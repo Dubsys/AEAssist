@@ -306,6 +306,8 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\GeneralAI\PhysicsRangeDPSHelper.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_Bloodfest.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_BlastingZone.cs" />
+    <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_Aurora.cs" />
+    <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_HeartofStone.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_NoMercy.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_RoughDivide.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_BowShock.cs" />
@@ -431,8 +433,10 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\Sage\GCD\SageGCDDot.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDDyskrasia.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDEgeiro.cs" />
+    <Compile Include="AI\Sage\GCD\SageGCDEukrasianPrognosis.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDEukrasianDiagnosis.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDPhlegma.cs" />
+    <Compile Include="AI\Sage\GCD\SageGCDEsuna.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDToxikon.cs" />
     <Compile Include="AI\Sage\OpenerSageStandard90.cs" />
     <Compile Include="AI\Sage\OpenerSagePneuma90.cs" />

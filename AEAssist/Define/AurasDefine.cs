@@ -303,11 +303,13 @@ namespace AEAssist.Define
             BloodsownCircle = 2972,
             CrestOfTimeReturned = 2598,
             CrestOfTimeBorrowed = 2597,
-            FlourishingSymmetry = 2693,
-            FlourshingFlow = 2694,
+            FlourishingSymmetry = 3017,
+            FlourshingFlow = 3018,
             FlourishingFinish = 2698,
             FourfoldFanDance = 2699,
             FlourishingStarfall = 2700,
+            SilkenFlow = 2694,
+            SilkenSymmetry = 2693,
             HeartOfCorundum = 2683,
             CatharsisOfCorundum = 2685,
             ClarityOfCorundum = 2684,
@@ -342,7 +344,10 @@ namespace AEAssist.Define
             KnightsResolve = 2675,
             //Dragoon
             BloodoftheDragon=736,
-            LifeSurge=2175
+            LifeSurge=2175,
+            Throttle=700,
+            //GNB
+            BrutalShell=1898
             ;
 
         private const int

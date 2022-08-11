@@ -13,7 +13,7 @@ namespace AEAssist.AI.Scholar.GCD
         
         public int Check(SpellEntity lastSpell)
         {
-            if (Core.Me.HasAura(AurasDefine.Dissipation))
+            if (Core.Me.HasAura(AurasDefine.Dissipation) || SpellsDefine.Dissipation.GetSpellEntity().Cooldown.TotalSeconds > 80)
             {
                 return -3;
             }
