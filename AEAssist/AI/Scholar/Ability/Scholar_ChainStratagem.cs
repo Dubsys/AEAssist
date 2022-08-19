@@ -28,6 +28,10 @@ namespace AEAssist.AI.Scholar.Ability
             {
                 return -3;
             }
+            if (AIRoot.GetBattleData<BattleData>().CurrBattleTimeInMs < 7000)
+            {
+                return -7;
+            }
             return 0;
         }
 

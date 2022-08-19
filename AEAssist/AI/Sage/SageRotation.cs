@@ -32,7 +32,7 @@ namespace AEAssist.AI.Sage
 
         public Task<bool> NoTarget()
         {
-            return Task.FromResult(false);
+            return Task.FromResult(true);
         }
 
         public SpellEntity GetBaseGCDSpell()

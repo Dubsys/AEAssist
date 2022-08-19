@@ -35,16 +35,16 @@ namespace AEAssist.TriggerSystem.TriggerAction
                     AIRoot.GetBattleData<BattleData>().NextGcdSpellId = new SpellEntity(t.SpellId, tt);
                     break;
                 case 4:
-                    AIRoot.GetBattleData<BattleData>().NextAbilitySpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(1) as BattleCharacter);
+                    AIRoot.GetBattleData<BattleData>().NextGcdSpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(1) as BattleCharacter);
                     break;
                 case 5:
-                    AIRoot.GetBattleData<BattleData>().NextAbilitySpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(2) as BattleCharacter);
+                    AIRoot.GetBattleData<BattleData>().NextGcdSpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(2) as BattleCharacter);
                     break;
                 case 7:
-                    AIRoot.GetBattleData<BattleData>().NextAbilitySpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(6) as BattleCharacter);
+                    AIRoot.GetBattleData<BattleData>().NextGcdSpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(6) as BattleCharacter);
                     break;
                 case 8:
-                    AIRoot.GetBattleData<BattleData>().NextAbilitySpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(7) as BattleCharacter);
+                    AIRoot.GetBattleData<BattleData>().NextGcdSpellId = new SpellEntity(t.SpellId, skillTargets.ElementAt(7) as BattleCharacter);
                     break;
             }
         }

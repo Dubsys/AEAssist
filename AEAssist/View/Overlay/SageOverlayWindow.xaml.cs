@@ -1,4 +1,5 @@
 ﻿using AEAssist.AI;
+using AEAssist.AI.Sage;
 using AEAssist.Define;
 using AEAssist.Helper;
 using PropertyChanged;
@@ -48,12 +49,7 @@ namespace AEAssist.View.Overlay
         // E.Diagnosis
         private void UseEukrasianDiagnosis_OnClick(object sender, RoutedEventArgs e)
         {
-            // TODO: wait for AE to implement a method to use E.Diagnosis on target.
-            var slot = ObjectPool.Instance.Fetch<SpellQueueSlot>();
-            slot.SetGCDQueue((SpellsDefine.Eukrasia, SpellTargetType.Self),
-                (SpellsDefine.EukrasianDiagnosis, SpellTargetType.CurrTarget));
-            AIRoot.GetBattleData<BattleData>().NextSpellSlot = slot;
-
+            SageSpellHelper.CastEukrasianDiagnosisTest();
         }
 
         // E.Prognosis
