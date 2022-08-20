@@ -1,4 +1,5 @@
-﻿using AEAssist.Define;
+﻿using AEAssist.AI.Astrologian.GCD;
+using AEAssist.Define;
 using AEAssist.Helper;
 using AEAssist.Rotations.Core;
 using ff14bot.Enums;
@@ -22,10 +23,12 @@ namespace AEAssist.AI.Astrologian
         {
             return Task.FromResult(false);
         }
-
-        public Task<bool> NoTarget()
+        
+        public async Task<bool> NoTarget()
         {
-            return Task.FromResult(false);
+            var skill = new AstNotar();
+            await skill.Run();
+            return true;
         }
 
         public SpellEntity GetBaseGCDSpell()

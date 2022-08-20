@@ -13,7 +13,7 @@ namespace AEAssist.AI.Sage.GCD
         {
             if (SettingMgr.GetSetting<SageSettings>().zhudongdandun)
             {
-                int num = GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealth > 0 && r.CurrentHealthPercent < 30 && !r.HasAura(AurasDefine.EukrasianDiagnosis) && !r.HasAura(AurasDefine.DifferentialDiagnosis));
+                int num = GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealth > 0 && (r.CurrentHealthPercent < 50 && r.IsTank() || r.CurrentHealthPercent < 30) && !r.HasAura(AurasDefine.EukrasianDiagnosis) && !r.HasAura(AurasDefine.DifferentialDiagnosis) && r.IsTank());
                 if (num > 0)
                 {
                     return 1;

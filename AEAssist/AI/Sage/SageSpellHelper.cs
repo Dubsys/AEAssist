@@ -546,19 +546,22 @@ namespace AEAssist.AI.Sage
 
             //var spell = new SpellEntity(SpellsDefine.EukrasianDiagnosis, target as BattleCharacter);
             //return await spell.DoGCD();
-
-            if (GroupHelper.InParty)
+            if (GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealthPercent < 50 && r.IsTank() || r.CurrentHealthPercent < 30)>0||MovementManager.IsMoving)
             {
-                var skillTarget = GroupHelper.CastableAlliesWithin30.
-                    Where(r => r.CurrentHealth > 0
-                               && !r.HasAura(AurasDefine.EukrasianDiagnosis)
-                               && !r.HasAura(AurasDefine.DifferentialDiagnosis)).
-                    OrderBy(GetHealth);
-                if (!SpellsDefine.EukrasianDiagnosis.IsUnlock()) return null;
-                var spell = new SpellEntity(SpellsDefine.EukrasianDiagnosis, skillTarget.FirstOrDefault() as BattleCharacter);
-                await CastEukrasia();
-                await spell.DoGCD();
+                if (GroupHelper.InParty)
+                {
+                    var skillTarget = GroupHelper.CastableAlliesWithin30.
+                        Where(r => r.CurrentHealth > 0
+                                   && !r.HasAura(AurasDefine.EukrasianDiagnosis)
+                                   && !r.HasAura(AurasDefine.DifferentialDiagnosis)).
+                        OrderBy(GetHealth);
+                    if (!SpellsDefine.EukrasianDiagnosis.IsUnlock()) return null;
+                    var spell = new SpellEntity(SpellsDefine.EukrasianDiagnosis, skillTarget.FirstOrDefault() as BattleCharacter);
+                    await CastEukrasia();
+                    await spell.DoGCD();
+                }
             }
+            
             return null;
         }
         public static async Task<SpellEntity> CastEukrasianPrognosisTest()
