@@ -203,6 +203,7 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\Astrologian\Ast_AIPriorityQueue.cs" />
     <Compile Include="AI\Astrologian\GCD\AstAOE.cs" />
     <Compile Include="AI\Astrologian\GCD\AstAspectedHelios .cs" />
+    <Compile Include="AI\Astrologian\GCD\AstNotar.cs" />
     <Compile Include="AI\Astrologian\GCD\AstHelios.cs" />
     <Compile Include="AI\Astrologian\GCD\AstBaseGCD.cs" />
     <Compile Include="AI\Astrologian\GCD\AstGCDAscend.cs" />

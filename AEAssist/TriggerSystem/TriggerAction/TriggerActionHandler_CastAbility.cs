@@ -17,7 +17,7 @@ namespace AEAssist.TriggerSystem.TriggerAction
             switch (t.TargetType)
             {
                 case 0:
-                    AIRoot.GetBattleData<BattleData>().NextAbilitySpellId = new SpellEntity(t.SpellId);
+                    AIRoot.GetBattleData<BattleData>().NextAbilitySpellId = new SpellEntity(t.SpellId, SpellTargetType.Self);
                     break;
                 case 1:
                     AIRoot.GetBattleData<BattleData>().NextAbilitySpellId = new SpellEntity(t.SpellId, SpellTargetType.Self);

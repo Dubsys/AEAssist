@@ -1,7 +1,10 @@
-﻿using AEAssist.Define;
+﻿using AEAssist.AI.Sage.GCD;
+using AEAssist.Define;
 using AEAssist.Helper;
 using AEAssist.Rotations.Core;
+using ff14bot;
 using ff14bot.Enums;
+using ff14bot.Managers;
 using System.Threading.Tasks;
 
 namespace AEAssist.AI.Sage
@@ -30,9 +33,11 @@ namespace AEAssist.AI.Sage
             return Task.FromResult(false);
         }
 
-        public Task<bool> NoTarget()
-        {
-            return Task.FromResult(true);
+        public async Task<bool> NoTarget()
+        {        
+            var skill = new SageGCDEukrasianDiagnosis();
+            await skill.Run();
+            return true;
         }
 
         public SpellEntity GetBaseGCDSpell()
