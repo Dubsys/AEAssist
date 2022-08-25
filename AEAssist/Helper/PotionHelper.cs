@@ -23,6 +23,11 @@ namespace AEAssist.Helper
             DexPotions.Clear();
             DexPotions.Add(new PotionData
             {
+                ID = 37841,
+                Name = "Grade 7 Dex/7级巧力之幻药"
+            });
+            DexPotions.Add(new PotionData
+            {
                 ID = 36110,
                 Name = "Grade 6 Dex/6级巧力之幻药"
             });
@@ -49,6 +54,11 @@ namespace AEAssist.Helper
                 StrPotions = new List<PotionData>();
             StrPotions.Add(new PotionData
             {
+                ID = 37840,
+                Name = "Grade 7 Str/7级刚力之幻药"
+            });
+            StrPotions.Add(new PotionData
+            {
                 ID = 36109,
                 Name = "Grade 6 Str/6级刚力之幻药"
             });
@@ -70,6 +80,11 @@ namespace AEAssist.Helper
 
             if (MindPotions == null)
                 MindPotions = new List<PotionData>();
+            StrPotions.Add(new PotionData
+            {
+                ID = 37844,
+                Name = "Grade 7 Mind/7级意力"
+            });
             MindPotions.Add(new PotionData
             {
                 ID = 36113,
@@ -93,7 +108,11 @@ namespace AEAssist.Helper
 
             if (IntPotions == null)
                 IntPotions = new List<PotionData>();
-
+            IntPotions.Add(new PotionData
+            {
+                ID = 37843,
+                Name = "Grade 7 INT/7级智力"
+            });
             IntPotions.Add(new PotionData
             {
                 ID = 36112,
