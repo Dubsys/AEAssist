@@ -58,7 +58,7 @@ namespace AEAssist.AI.Dragoon.Ability
         public int Check(SpellEntity lastSpell)
         {          
             spell = GetSpell();
-            LogHelper.Info($"将要释放的技能为: {spell.ToString()}");
+            //LogHelper.Info($"将要释放的技能为: {spell.ToString()}");
             if (spell == SpellsDefine.LifeSurge)
                 if (!SettingMgr.GetSetting<DragoonSettings>().LifeSurge) return -1;
             if (spell == SpellsDefine.LanceCharge)

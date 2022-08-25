@@ -32,6 +32,11 @@ namespace AEAssist.AI.Bard.GCD
                 return -3;
             }
 
+            if (TargetHelper.CheckNeedUseAOE(12,12))
+            {
+                return -5;
+            }
+
             return 0;
         }
 

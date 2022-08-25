@@ -54,7 +54,7 @@ namespace AEAssist.AI.Dragoon.GCD
             else
                 Yingdot = target.HasMyAuraWithTimeleft(AurasDefine.ChaoticSpring, 12000);
             
-            LogHelper.Info($"当前等级为：{Core.Me.ClassLevel}，下一个技能: {spell.ToString()},上一个技能:{ActionManager.LastSpellId},dot需要补吗 {!Yingdot}");
+            //LogHelper.Info($"当前等级为：{Core.Me.ClassLevel}，下一个技能: {spell.ToString()},上一个技能:{ActionManager.LastSpellId},dot需要补吗 {!Yingdot}");
             if (!spell.IsUnlock())
                 spell = SpellsDefine.TrueThrust;
 

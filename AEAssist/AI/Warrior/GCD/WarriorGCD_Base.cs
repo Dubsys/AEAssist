@@ -38,7 +38,7 @@ namespace AEAssist.AI.Warrior.GCD
         {
             spell = GetSpell();
             //解放CD快好了就打3连怎么写，技能CD……
-            //LogHelper.Debug("look this：" + spell.ToString());
+            //LogHelper.Info($"准备释放: {spell.ToString()}");
             if (!spell.IsReady())
                 return -1;
             return 0;

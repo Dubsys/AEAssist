@@ -9,7 +9,7 @@ namespace AEAssist.AI.Warrior.GCD
 {
     public class WarriorGCD_PrimalRend : IAIHandler
     {
-        uint spell;
+        uint spell;//蛮荒崩裂
 
         public int Check(SpellEntity lastSpell)
         {

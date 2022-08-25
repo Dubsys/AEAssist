@@ -344,7 +344,27 @@ namespace AEAssist.AI.Samurai
                 counts++;
             return counts;
         }
+        public static uint newSenCounts()
+        {
+            //0=无闪
+            //1=雪
+            //2=月
+            //3=雪+月
+            //4=花
+            //5=月+花
+            //6=雪+花
+            //7=三闪
+            uint counts = 0;
+            if (ActionResourceManager.Samurai.Sen.HasFlag(ActionResourceManager.Samurai.Iaijutsu.Getsu))
+                counts+=2;
 
+            if (ActionResourceManager.Samurai.Sen.HasFlag(ActionResourceManager.Samurai.Iaijutsu.Setsu))
+                counts+=1;
+
+            if (ActionResourceManager.Samurai.Sen.HasFlag(ActionResourceManager.Samurai.Iaijutsu.Ka))
+                counts+=4;
+            return counts;
+        }
         public static bool GekkoPOSCheck()
         {
             // Gekko
