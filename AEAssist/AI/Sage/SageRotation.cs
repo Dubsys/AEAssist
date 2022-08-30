@@ -34,8 +34,12 @@ namespace AEAssist.AI.Sage
         }
 
         public async Task<bool> NoTarget()
-        {        
-            var skill = new SageGCDEukrasianDiagnosis();
+        {
+            if (AIRoot.GetBattleData<BattleData>().CurrBattleTimeInMs <= 0)
+            {
+                return false;
+            }
+            var skill = new SageNotar();
             await skill.Run();
             return true;
         }

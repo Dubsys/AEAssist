@@ -18,10 +18,10 @@ namespace AEAssist.AI.Sage
             new SageGcdEsuna(),
             new SageGCDDyskrasia(),
             new SageGCDEukrasianPrognosis(),
+            new SageGCDEukrasianDiagnosis(),
             new SageGcdDot(),
             new SageGcdToxikon(),
             new SageGcdPhlegma(),
-            new SageGCDEukrasianDiagnosis(),
             new SageBaseGCD(),
         };
 

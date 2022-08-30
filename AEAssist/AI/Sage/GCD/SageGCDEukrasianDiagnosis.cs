@@ -13,13 +13,22 @@ namespace AEAssist.AI.Sage.GCD
         {
             if (SettingMgr.GetSetting<SageSettings>().zhudongdandun)
             {
-                int num = GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealth > 0 && (r.CurrentHealthPercent < 50 && r.IsTank() || r.CurrentHealthPercent < 30) && !r.HasAura(AurasDefine.EukrasianDiagnosis) && !r.HasAura(AurasDefine.DifferentialDiagnosis) && r.IsTank());
+                int num = GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealth > 0 && (r.CurrentHealthPercent < 50 && r.IsTank() || r.CurrentHealthPercent < 30) && !r.HasAura(AurasDefine.EukrasianDiagnosis) && !r.HasAura(AurasDefine.DifferentialDiagnosis));
                 if (num > 0)
                 {
                     return 1;
                 }
                 
             }
+            var phlegmaCharges = DataManager.GetSpellData(SpellsDefine.Phlegma).Charges;
+            var phlegmaChargesII = DataManager.GetSpellData(SpellsDefine.PhlegmaII).Charges;
+            var phlegmaChargesIII = DataManager.GetSpellData(SpellsDefine.PhlegmaIII).Charges;
+            float v = (phlegmaCharges + phlegmaChargesII + phlegmaChargesIII + ActionResourceManager.Sage.Addersting);
+            LogHelper.Debug(v.ToString());
+            if (phlegmaCharges + phlegmaChargesII + phlegmaChargesIII + ActionResourceManager.Sage.Addersting > 0)
+            {
+                return -1;
+            }            
             if (!MovementManager.IsMoving) return -1;
             return 0;
         }

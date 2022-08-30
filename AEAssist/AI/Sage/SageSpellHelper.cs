@@ -546,7 +546,7 @@ namespace AEAssist.AI.Sage
 
             //var spell = new SpellEntity(SpellsDefine.EukrasianDiagnosis, target as BattleCharacter);
             //return await spell.DoGCD();
-            if (GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealthPercent < 50 && r.IsTank() || r.CurrentHealthPercent < 30)>0||MovementManager.IsMoving)
+            if ((GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealthPercent < 50 && r.IsTank() || r.CurrentHealthPercent < 30)>0||MovementManager.IsMoving)&& AIRoot.GetBattleData<BattleData>().CurrBattleTimeInMs > 0)
             {
                 if (GroupHelper.InParty)
                 {
@@ -583,7 +583,10 @@ namespace AEAssist.AI.Sage
             }
             return null;
         }
-
+        public static async Task<SpellEntity> Notar()
+        {
+            return null;
+        }
         public static float GetHealth(Character c)
         {
             return c.CurrentHealthPercent;
