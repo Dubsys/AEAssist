@@ -277,7 +277,9 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\Dancer\GCD\DancerGCD_BaseGCD.cs" />
     <Compile Include="AI\Dancer\DancerSpellHelper.cs" />
     <Compile Include="AI\Dancer\DancerBattleData.cs" />
+    <Compile Include="AI\Dancer\GCD\DancerGCD_DanceStep2.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_DanecStep.cs" />
+    <Compile Include="AI\Dancer\GCD\DancerGCD_Finish.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_Procs.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_ProcsSave.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_SaberDance.cs" />
