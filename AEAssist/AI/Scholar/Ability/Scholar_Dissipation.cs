@@ -12,7 +12,7 @@ namespace AEAssist.AI.Scholar.Ability
         static public uint GetSpell()
         {
             if (GameObjectManager.PetObjectId == GameObjectManager.EmptyGameObject) return 0;
-            if (SpellsDefine.Dissipation.IsReady() && ActionResourceManager.Scholar.Aetherflow == 0)//转化判定
+            if (SpellsDefine.Dissipation.IsUnlock() && ActionResourceManager.Scholar.Aetherflow == 0)//转化判定
                     return SpellsDefine.Dissipation;
             return 0;
         }

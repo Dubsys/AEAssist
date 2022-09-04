@@ -203,6 +203,7 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\Astrologian\Ast_AIPriorityQueue.cs" />
     <Compile Include="AI\Astrologian\GCD\AstAOE.cs" />
     <Compile Include="AI\Astrologian\GCD\AstAspectedHelios .cs" />
+    <Compile Include="AI\Astrologian\GCD\AstNotar.cs" />
     <Compile Include="AI\Astrologian\GCD\AstHelios.cs" />
     <Compile Include="AI\Astrologian\GCD\AstBaseGCD.cs" />
     <Compile Include="AI\Astrologian\GCD\AstGCDAscend.cs" />
@@ -276,7 +277,9 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\Dancer\GCD\DancerGCD_BaseGCD.cs" />
     <Compile Include="AI\Dancer\DancerSpellHelper.cs" />
     <Compile Include="AI\Dancer\DancerBattleData.cs" />
+    <Compile Include="AI\Dancer\GCD\DancerGCD_DanceStep2.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_DanecStep.cs" />
+    <Compile Include="AI\Dancer\GCD\DancerGCD_Finish.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_Procs.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_ProcsSave.cs" />
     <Compile Include="AI\Dancer\GCD\DancerGCD_SaberDance.cs" />
@@ -306,6 +309,8 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\GeneralAI\PhysicsRangeDPSHelper.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_Bloodfest.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_BlastingZone.cs" />
+    <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_Aurora.cs" />
+    <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_HeartofStone.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_NoMercy.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_RoughDivide.cs" />
     <Compile Include="AI\GunBreaker\Ability\GunBreakerAbility_BowShock.cs" />
@@ -430,9 +435,12 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="AI\Sage\GCD\SageBaseGCD.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDDot.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDDyskrasia.cs" />
+    <Compile Include="AI\Sage\GCD\SageNotar.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDEgeiro.cs" />
+    <Compile Include="AI\Sage\GCD\SageGCDEukrasianPrognosis.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDEukrasianDiagnosis.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDPhlegma.cs" />
+    <Compile Include="AI\Sage\GCD\SageGCDEsuna.cs" />
     <Compile Include="AI\Sage\GCD\SageGCDToxikon.cs" />
     <Compile Include="AI\Sage\OpenerSageStandard90.cs" />
     <Compile Include="AI\Sage\OpenerSagePneuma90.cs" />
@@ -676,6 +684,8 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
       <DependentUpon>BardSettingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Converters\RangeToBooleanConverter.cs" />
+    <Compile Include="View\Hotkey\BuiltinHotkeys\EukrasianDiagnosis.cs" />
+    <Compile Include="View\Hotkey\BuiltinHotkeys\EukrasianPrognosis.cs" />
     <Compile Include="View\Overlay\SchOverlayWindow.xaml.cs">
       <DependentUpon>SchOverlayWindow.xaml</DependentUpon>
     </Compile>

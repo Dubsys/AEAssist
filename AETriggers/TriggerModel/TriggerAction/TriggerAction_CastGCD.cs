@@ -9,7 +9,7 @@ namespace AEAssist.TriggerAction
     public class TriggerAction_CastGCD : ITriggerAction
     {
         public uint SpellId { get; set; }
-        [GUIIntRange(0, 3)]
+        [GUIIntRange(0, 8)]
         [GUIToolTip("0: DefaultByCode 1: Self 2: Target 3: Target's Target \n 0: 默认 1: 自己 2: 目标 3: 目标的目标 ")]
         public int TargetType { get; set; }
         public void WriteFromJson(string[] values)

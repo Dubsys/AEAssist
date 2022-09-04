@@ -10,6 +10,10 @@ namespace AEAssist.AI.Sage.GCD
     {
         public int Check(SpellEntity lastSpell)
         {
+            if (!SpellsDefine.Dyskrasia.IsUnlock())
+            {
+                return -5;
+            }
             if (SpellsDefine.PhlegmaIII.IsMaxChargeReady(0.3f))
             {
                 LogHelper.Debug("Max charge for plhelgam is ready don't Dykrasia");

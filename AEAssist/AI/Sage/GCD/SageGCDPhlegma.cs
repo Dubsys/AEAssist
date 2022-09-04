@@ -35,6 +35,10 @@ namespace AEAssist.AI.Sage.GCD
         }
         public int Check(SpellEntity lastSpell)
         {
+            if (!SpellsDefine.Phlegma.IsUnlock())
+            {
+                return -5;
+            }
             var phlegmaCheck = SageSpellHelper.GetPhlegma();
             if (phlegmaCheck == null) return -1;
             if (!ActionManager.CanCastOrQueue(phlegmaCheck.SpellData, Core.Me.CurrentTarget))
