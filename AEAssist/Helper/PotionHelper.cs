@@ -80,7 +80,7 @@ namespace AEAssist.Helper
 
             if (MindPotions == null)
                 MindPotions = new List<PotionData>();
-            StrPotions.Add(new PotionData
+            MindPotions.Add(new PotionData
             {
                 ID = 37844,
                 Name = "Grade 7 Mind/7级意力"
