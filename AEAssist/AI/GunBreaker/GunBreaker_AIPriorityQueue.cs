@@ -32,9 +32,7 @@ namespace AEAssist.AI.Gunbreaker
             new GunBreakerAbility_Bloodfest(),
             new GunBreakerAbility_BlastingZone(),
             //new GunBreakerAbility_BowShock(),
-            new GunBreakerAbility_RoughDivide(),
-            new GunBreakerAbility_Aurora(),
-            new GunBreakerAbility_HeartofStone()
+            new GunBreakerAbility_RoughDivide()
         };
 
         public async Task<bool> UsePotion()

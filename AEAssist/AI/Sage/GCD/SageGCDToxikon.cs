@@ -9,10 +9,6 @@ namespace AEAssist.AI.Sage.GCD
     {
         public int Check(SpellEntity lastSpell)
         {
-            if (!SpellsDefine.Toxikon.IsUnlock())
-            {
-                return -5;
-            }
             var toxikonCheck = SageSpellHelper.GetToxikon();
             if (toxikonCheck == null) return -5;
 

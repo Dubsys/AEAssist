@@ -343,11 +343,11 @@ namespace AEAssist.Define
             HolySheltron = 2674,
             KnightsResolve = 2675,
             //Dragoon
-            BloodoftheDragon=736,
-            LifeSurge=2175,
-            Throttle=700,
+            BloodoftheDragon = 736,
+            LifeSurge = 2175,
+            Throttle = 700,
             //GNB
-            BrutalShell=1898
+            BrutalShell = 1898
             ;
 
         private const int

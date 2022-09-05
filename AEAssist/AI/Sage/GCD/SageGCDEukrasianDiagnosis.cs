@@ -1,8 +1,6 @@
 ﻿using AEAssist.Define;
 using AEAssist.Helper;
 using ff14bot.Managers;
-using ff14bot.Objects;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace AEAssist.AI.Sage.GCD
@@ -11,24 +9,10 @@ namespace AEAssist.AI.Sage.GCD
     {
         public int Check(SpellEntity lastSpell)
         {
-            if (SettingMgr.GetSetting<SageSettings>().zhudongdandun)
+            if (!SettingMgr.GetSetting<SageSettings>().Heal)
             {
-                int num = GroupHelper.CastableAlliesWithin30.Count(r => r.CurrentHealth > 0 && (r.CurrentHealthPercent < 50 && r.IsTank() || r.CurrentHealthPercent < 30) && !r.HasAura(AurasDefine.EukrasianDiagnosis) && !r.HasAura(AurasDefine.DifferentialDiagnosis));
-                if (num > 0)
-                {
-                    return 1;
-                }
-                
+                return -2;
             }
-            var phlegmaCharges = DataManager.GetSpellData(SpellsDefine.Phlegma).Charges;
-            var phlegmaChargesII = DataManager.GetSpellData(SpellsDefine.PhlegmaII).Charges;
-            var phlegmaChargesIII = DataManager.GetSpellData(SpellsDefine.PhlegmaIII).Charges;
-            float v = (phlegmaCharges + phlegmaChargesII + phlegmaChargesIII + ActionResourceManager.Sage.Addersting);
-            LogHelper.Debug(v.ToString());
-            if (phlegmaCharges + phlegmaChargesII + phlegmaChargesIII + ActionResourceManager.Sage.Addersting > 0)
-            {
-                return -1;
-            }            
             if (!MovementManager.IsMoving) return -1;
             return 0;
         }

@@ -107,7 +107,6 @@ namespace AEAssist
         public string Toggle_Potion { get; set; }
 
         public string Toggle_ActiveAttack { get; set; }
-        public string Toggle_zhudongdandun { get; set; }
 
         #endregion
 
@@ -281,9 +280,6 @@ namespace AEAssist
         public string Combox_Hotkey_BurstOff { get; set; }
 
         public string Combox_Hotkey_EnAvant { get; set; }
-        
-        public string Combox_Hotkey_EukrasianPrognosis { get; set; }
-        public string Combox_Hotkey_EukrasianDiagnosis { get; set; }
 
         public string Combox_Hotkey_ArmLength { get; set; }
         public string Combox_Hotkey_Surecast { get; set; }
