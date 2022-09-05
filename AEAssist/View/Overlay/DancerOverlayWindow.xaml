@@ -81,6 +81,10 @@
                                   Content="{Binding Language.Toggle_FinalBurst}"
                                   Style="{StaticResource CheckBoxOverlayCustomToggle}"
                                   IsChecked="{Binding FinalBurst,Mode=TwoWay}" />
+                        <CheckBox HorizontalContentAlignment="Center"
+                                  Content="{Binding Language.Toggle_TechFirst}"
+                                  Style="{StaticResource CheckBoxOverlayCustomToggle}"
+                                  IsChecked="{Binding TechFirst,Mode=TwoWay}" />
                     </WrapPanel>
                     <WrapPanel Margin="10">
                         

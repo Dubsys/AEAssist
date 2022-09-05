@@ -15,13 +15,13 @@ namespace AEAssist.AI.Dancer
             Random rnd = new Random();
             int step1 = rnd.Next(9000, 13000);
             int PotionTimer = rnd.Next(1650, 1800);
-            CountDownHandler.Instance.AddListener(14000, () => SpellsDefine.StandardStep.DoGCD());
-            CountDownHandler.Instance.AddListener(step1, () => DancerSpellHelper.PreCombatDanceSteps());
-            CountDownHandler.Instance.AddListener(PotionTimer, () =>
-                PotionHelper.UsePotion(SettingMgr.GetSetting<GeneralSettings>().DexPotionId));
-            CountDownHandler.Instance.AddListener(100, () => SpellsDefine.DoubleStandardFinish.DoGCD());
-            AEAssist.DataBinding.Instance.EarlyDecisionMode = SettingMgr.GetSetting<DancerSettings>().EarlyDecisionMode;
-            LogHelper.Info("EarlyDecisionMode: " + AEAssist.DataBinding.Instance.EarlyDecisionMode);
+                CountDownHandler.Instance.AddListener(14000, () => DancerSpellHelper.TechFirst().DoGCD());
+                CountDownHandler.Instance.AddListener(step1, () => DancerSpellHelper.PreCombatDanceSteps());
+                CountDownHandler.Instance.AddListener(PotionTimer, () =>
+                    PotionHelper.UsePotion(SettingMgr.GetSetting<GeneralSettings>().DexPotionId));
+                CountDownHandler.Instance.AddListener(100, () => SpellsDefine.DoubleStandardFinish.DoGCD());
+                AEAssist.DataBinding.Instance.EarlyDecisionMode = SettingMgr.GetSetting<DancerSettings>().EarlyDecisionMode;
+                LogHelper.Info("EarlyDecisionMode: " + AEAssist.DataBinding.Instance.EarlyDecisionMode);            
         }
 
         public Task<bool> PreCombatBuff()

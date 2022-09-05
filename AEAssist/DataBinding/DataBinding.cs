@@ -116,6 +116,7 @@ namespace AEAssist
             LazyOn = false;
             TimeStr = "";
             UseBattery = true;
+            TechFirst = false;
             UseHeat = true;
             UseSong = true;
             UseEnshroud = true;
@@ -176,6 +177,8 @@ namespace AEAssist
 
         public bool UseFlourish { get; set; } = true;
         public bool UseSaberDance { get; set; } = true;
+
+        public bool TechFirst { get; set; } = false;
 
         #endregion
 
