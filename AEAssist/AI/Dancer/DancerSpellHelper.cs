@@ -141,6 +141,14 @@ namespace AEAssist.AI.Dancer
             }
             return SpellsDefine.StandardStep.GetSpellEntity();
         }
+        public static SpellEntity Finish()
+        {
+            if (AEAssist.DataBinding.Instance.TechFirst)
+            {
+                return SpellsDefine.QuadrupleTechnicalFinish.GetSpellEntity();
+            }
+            return SpellsDefine.DoubleStandardFinish.GetSpellEntity();
+        }
         public static async Task PreCombatDanceSteps()
         {
             bool finish = false;

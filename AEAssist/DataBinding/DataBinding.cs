@@ -115,8 +115,7 @@ namespace AEAssist
             UseSaberDance = true;
             LazyOn = false;
             TimeStr = "";
-            UseBattery = true;
-            TechFirst = false;
+            UseBattery = true;            
             UseHeat = true;
             UseSong = true;
             UseEnshroud = true;

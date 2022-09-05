@@ -19,7 +19,7 @@ namespace AEAssist.AI.Dancer
                 CountDownHandler.Instance.AddListener(step1, () => DancerSpellHelper.PreCombatDanceSteps());
                 CountDownHandler.Instance.AddListener(PotionTimer, () =>
                     PotionHelper.UsePotion(SettingMgr.GetSetting<GeneralSettings>().DexPotionId));
-                CountDownHandler.Instance.AddListener(100, () => SpellsDefine.DoubleStandardFinish.DoGCD());
+                CountDownHandler.Instance.AddListener(100, () => DancerSpellHelper.Finish().DoGCD());
                 AEAssist.DataBinding.Instance.EarlyDecisionMode = SettingMgr.GetSetting<DancerSettings>().EarlyDecisionMode;
                 LogHelper.Info("EarlyDecisionMode: " + AEAssist.DataBinding.Instance.EarlyDecisionMode);            
         }
