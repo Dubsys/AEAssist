@@ -63,9 +63,9 @@
                                   IsChecked="{Binding UseDot,Mode=TwoWay}" />
 
                         <CheckBox HorizontalContentAlignment="Center"
-                                  Content="{Binding Language.Toggle_zhudongdandun}"
+                                  Content="{Binding Language.Toggle_ActiveAttack}"
                                   Style="{StaticResource CheckBoxOverlayCustomToggle}"
-                                  IsChecked="{Binding SageSettings.zhudongdandun,Mode=TwoWay}" />
+                                  IsChecked="{Binding Pull,Mode=TwoWay}" />
                         
                         <CheckBox HorizontalContentAlignment="Center"
                                   Content="{Binding Language.Toggle_LucidDreaming}"

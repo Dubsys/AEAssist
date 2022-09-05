@@ -1,8 +1,6 @@
-﻿using AEAssist.AI.Dancer.GCD;
-using AEAssist.Define;
+﻿using AEAssist.Define;
 using AEAssist.Helper;
 using AEAssist.Rotations.Core;
-using ff14bot;
 using ff14bot.Enums;
 using System;
 using System.Threading.Tasks;
@@ -30,19 +28,9 @@ namespace AEAssist.AI.Dancer
         {
             return Task.FromResult(false);
         }
-        public async Task<bool> NoTarget()
+        public Task<bool> NoTarget()
         {
-            if (AIRoot.GetBattleData<BattleData>().CurrBattleTimeInMs <= 0)
-            {
-                return false;
-            }
-            var skill = new DancerGCD_DanceStep2();
-            if (Core.Me.HasAura(AurasDefine.StandardStep) ||
-                Core.Me.HasAura(AurasDefine.TechnicalStep))
-            {
-                await skill.Run();
-            }
-            return false;
+            return Task.FromResult(false);
         }
         public SpellEntity GetBaseGCDSpell()
         {

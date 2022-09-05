@@ -1,10 +1,7 @@
-﻿using AEAssist.AI.Sage.GCD;
-using AEAssist.Define;
+﻿using AEAssist.Define;
 using AEAssist.Helper;
 using AEAssist.Rotations.Core;
-using ff14bot;
 using ff14bot.Enums;
-using ff14bot.Managers;
 using System.Threading.Tasks;
 
 namespace AEAssist.AI.Sage
@@ -19,11 +16,9 @@ namespace AEAssist.AI.Sage
         public void Init()
         {
             CountDownHandler.Instance.AddListener(15000, SageSpellHelper.PrePullEukrasianDiagnosisThreePeople);
-            //CountDownHandler.Instance.AddListener(6000, SageSpellHelper.CastEukrasianPrognosis());
             CountDownHandler.Instance.AddListener(2500, () =>
                 PotionHelper.UsePotion(SettingMgr.GetSetting<GeneralSettings>().MindPotionId));
             CountDownHandler.Instance.AddListener(1500, () => SageSpellHelper.GetDosis().DoGCD());
-            
             AEAssist.DataBinding.Instance.EarlyDecisionMode = SettingMgr.GetSetting<SageSettings>().EarlyDecisionMode;
             LogHelper.Info("EarlyDecisionMode: " + AEAssist.DataBinding.Instance.EarlyDecisionMode);
         }
@@ -33,15 +28,9 @@ namespace AEAssist.AI.Sage
             return Task.FromResult(false);
         }
 
-        public async Task<bool> NoTarget()
+        public Task<bool> NoTarget()
         {
-            if (AIRoot.GetBattleData<BattleData>().CurrBattleTimeInMs <= 0)
-            {
-                return false;
-            }
-            var skill = new SageNotar();
-            await skill.Run();
-            return true;
+            return Task.FromResult(false);
         }
 
         public SpellEntity GetBaseGCDSpell()
