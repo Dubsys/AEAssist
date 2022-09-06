@@ -39,9 +39,17 @@ namespace AEAssist.AI.Gunbreaker
             return Task.FromResult(false);
         }
 
-        public Task<bool> NoTarget()
+        public async Task<bool> NoTarget()
         {
-            return Task.FromResult(false);
+            var BattleData = AIRoot.GetBattleData<BattleData>();
+            var spell = BattleData.NextAbilitySpellId;
+            if (spell != null)
+                return false;
+            if ( await spell.DoAbility())
+            {
+                AIRoot.GetBattleData<BattleData>().NextAbilitySpellId=null;
+            }
+            return true;
         }
 
         public SpellEntity GetBaseGCDSpell()
