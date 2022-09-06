@@ -10,6 +10,8 @@ namespace AEAssist.AI.GunBreaker.GCD
     {
         public int Check(SpellEntity lastSpell)
         {
+            if (!SpellsDefine.BurstStrike.GetSpellEntity().IsReady())//for spell black list;
+                return -1;
             if (ActionResourceManager.Gunbreaker.Cartridge == 0)
                 return -5;
             if (TargetHelper.CheckNeedUseAOEByMe(5, 5, 3))
@@ -36,8 +38,7 @@ namespace AEAssist.AI.GunBreaker.GCD
                 if (SpellsDefine.DoubleDown.GetSpellEntity().SpellData.Cooldown.TotalMilliseconds == 0 && ActionResourceManager.Gunbreaker.Cartridge > 1)
                     return -1;
                 //90级技能冷却时间<无情时间
-                else if (Core.Me.HasMyAuraWithTimeleft(AurasDefine.NoMercy, (int)SpellsDefine.DoubleDown.GetSpellEntity().SpellData.Cooldown.TotalMilliseconds)
-                    && ActionResourceManager.Gunbreaker.Cartridge > 1)
+                else if (Core.Me.HasMyAuraWithTimeleft(AurasDefine.NoMercy, (int)SpellsDefine.DoubleDown.GetSpellEntity().SpellData.Cooldown.TotalMilliseconds))
                     return -51;
                 else return 6;
             }
