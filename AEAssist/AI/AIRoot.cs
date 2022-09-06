@@ -160,6 +160,81 @@ namespace AEAssist.AI
                 if (CanNotice("key1", 1000))
                     GUIHelper.ShowInfo(Language.Instance.Content_AIRoot_NoTarget, 500);
 
+                if (battleData.NextGcdSpellId != null)
+                {
+                   var ret = battleData.NextGcdSpellId;
+                    LogHelper.Debug($"NextGcd: {ret.Id} {ret.SpellData.LocalizedName}  {ret.IsUnlock()}");
+                    if (ret.SpellData != null && ret.IsUnlock())
+                    {
+                        LogHelper.Debug($"NextGcd: {ret.Id} {ret.SpellData.LocalizedName} CanCast:  {ret.CanCastGCD()}");
+                        if (ret.CanCastGCD() >= 0)
+                        {
+                            if (!await ret.DoGCD())
+                                ret = null;
+                            else
+                                battleData.NextGcdSpellId = null;
+                        }
+                        else
+                        {
+                            ret = null;
+                        }
+                    }
+                    else
+                    {
+                        ret = null;
+                        battleData.NextGcdSpellId = null;
+                    }
+
+                    if (ret == null && battleData.GCDRetryEndTime < TimeHelper.Now())
+                    {
+                        LogHelper.Debug($"RetryEndTime : NextGCD {battleData.NextGcdSpellId?.Id}");
+                        battleData.NextGcdSpellId = null;
+                    }
+                    if (ret == null)
+                        ret = await AIMgrs.Instance.HandleGCD(Core.Me.CurrentJob, battleData.lastGCDSpell);
+                    if (ret != null)
+                    {
+                        RecordGCD(ret);
+                        return false;
+                    }
+                }
+
+                if (battleData.NextAbilitySpellId != null)
+                {
+                    {
+                        var ret = battleData.NextAbilitySpellId;
+                        if (ret.SpellData != null && ret.IsUnlock())
+                        {
+                            if (ret.CanCastAbility())
+                            {
+                                if (!await ret.DoAbility())
+                                {
+                                    ret = null;
+                                    return false;
+                                }
+
+                                battleData.NextAbilitySpellId = null;
+                            }
+                            else
+                            {
+                                ret = null;
+                            }
+                        }
+                        else
+                        {
+                            ret = null;
+                            battleData.NextAbilitySpellId = null;
+                        }
+
+                        if (ret != null)
+                        {
+                            RecordAbility(ret);
+                            return false;
+                        }
+                    }
+                }
+
+
                 await RotationManager.Instance.NoTarget();
 
                 return false;

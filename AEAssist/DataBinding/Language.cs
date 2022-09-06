@@ -268,6 +268,9 @@ namespace AEAssist
 
         #endregion
 
+        #region DNC
+        public string Toggle_TechFirst { get; set; }
+        #endregion
 
         //Please put the following in the order of the class and inside its own region
 
