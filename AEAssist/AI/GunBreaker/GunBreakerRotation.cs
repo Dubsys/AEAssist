@@ -43,7 +43,7 @@ namespace AEAssist.AI.Gunbreaker
         {
             var BattleData = AIRoot.GetBattleData<BattleData>();
             var spell = BattleData.NextAbilitySpellId;
-            if (spell != null)
+            if (spell == null)
                 return false;
             if ( await spell.DoAbility())
             {
