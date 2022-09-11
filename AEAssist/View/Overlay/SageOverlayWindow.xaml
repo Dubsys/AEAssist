@@ -61,7 +61,7 @@
                                   Content="Dot"
                                   Style="{StaticResource CheckBoxOverlayCustomToggle}"
                                   IsChecked="{Binding UseDot,Mode=TwoWay}" />
-
+                        
                         <CheckBox HorizontalContentAlignment="Center"
                                   Content="{Binding Language.Toggle_ActiveAttack}"
                                   Style="{StaticResource CheckBoxOverlayCustomToggle}"
