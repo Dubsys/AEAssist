@@ -110,7 +110,6 @@ namespace AEAssist
             UseApex = true;
             UseDot = true;
             UseSoulGauge = true;
-            UseAOE = true;
             UseFlourish = true;
             UseSaberDance = true;
             LazyOn = false;
