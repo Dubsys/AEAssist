@@ -112,6 +112,22 @@
                     
                     <StackPanel Margin="5" Background="Purple" Orientation="Horizontal">
                         <Button Style="{StaticResource ImageButton}"
+                                Width="40" Height="40" Margin="6,2,6,2" Name="UseDiagnosis"
+                                ToolTip="Use Diagnosis"
+                                Click="UseDiagnosis_OnClick">
+                            <Image Source="../../Resources/Spells/Sage/Diagnosis.png"
+                                   Stretch="Uniform" />
+                        </Button>
+                        
+                        <Button Style="{StaticResource ImageButton}"
+                                Width="40" Height="40" Margin="6,2,6,2" Name="UsePrognosis"
+                                ToolTip="Use Prognosis"
+                                Click="UsePrognosis_OnClick">
+                            <Image Source="../../Resources/Spells/Sage/Prognosis.png"
+                                   Stretch="Uniform" />
+                        </Button>
+                        
+                        <Button Style="{StaticResource ImageButton}"
                                 Width="40" Height="40" Margin="6,2,6,2" Name="UseEukrasianDiagnosis"
                                 ToolTip="Use EukrasianDiagnosis"
                                 Click="UseEukrasianDiagnosis_OnClick">
@@ -126,75 +142,59 @@
                             <Image Source="../../Resources/Spells/Sage/EukrasianPrognosis.png"
                                    Stretch="Uniform" />
                         </Button>
-                        
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseHaima"
-                                ToolTip="Use Haima"
-                                Click="UseHaima_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Haima.png"
-                                   Stretch="Uniform" />
-                        </Button>
-                        
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseHolos"
-                                ToolTip="Use Holos"
-                                Click="UseHolos_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Holos.png"
-                                   Stretch="Uniform" />
-                        </Button>
                     </StackPanel>
                     
                     <StackPanel Margin="5" Background="Purple" Orientation="Horizontal">
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseIcarus"
-                                ToolTip="Use Icarus"
-                                Click="UseIcarus_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Icarus.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseIcarus" -->
+                        <!--         ToolTip="Use Icarus" -->
+                        <!--         Click="UseIcarus_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Icarus.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                         
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseIxochole"
-                                ToolTip="Use Ixochole"
-                                Click="UseIxochole_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Ixochole.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseIxochole" -->
+                        <!--         ToolTip="Use Ixochole" -->
+                        <!--         Click="UseIxochole_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Ixochole.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                         
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseKrasis"
-                                ToolTip="Use Krasis"
-                                Click="UseKrasis_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Krasis.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseKrasis" -->
+                        <!--         ToolTip="Use Krasis" -->
+                        <!--         Click="UseKrasis_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Krasis.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                         
                         
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UsePanhaima"
-                                ToolTip="Use Panhaima"
-                                Click="UsePanhaima_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Panhaima.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UsePanhaima" -->
+                        <!--         ToolTip="Use Panhaima" -->
+                        <!--         Click="UsePanhaima_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Panhaima.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                     </StackPanel>
                     
                     <StackPanel Margin="5" Background="Purple" Orientation="Horizontal">
-                         <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UsePepsis"
-                                ToolTip="Use Pepsis"
-                                Click="UsePepsi_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Pepsis.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!--  <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UsePepsis" -->
+                        <!--         ToolTip="Use Pepsis" -->
+                        <!--         Click="UsePepsi_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Pepsis.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                         
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UsePhysisII"
-                                ToolTip="Use PhysisII"
-                                Click="UsePhysisII_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/PhysisII.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UsePhysisII" -->
+                        <!--         ToolTip="Use PhysisII" -->
+                        <!--         Click="UsePhysisII_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/PhysisII.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                         
                         <Button Style="{StaticResource ImageButton}"
                                 Width="40" Height="40" Margin="6,2,6,2" Name="UsePneuma"
@@ -204,38 +204,54 @@
                                    Stretch="Uniform" />
                         </Button>
                         
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseRhizomata"
-                                ToolTip="Use Rhizomata"
-                                Click="UseRhizomata_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Rhizomata.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseRhizomata" -->
+                        <!--         ToolTip="Use Rhizomata" -->
+                        <!--         Click="UseRhizomata_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Rhizomata.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                     </StackPanel>
                     <StackPanel Margin="5" Background="Purple" Orientation="Horizontal">
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseTaurochole"
-                                ToolTip="Use Taurochole"
-                                Click="UseTaurochole_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Taurochole.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseTaurochole" -->
+                        <!--         ToolTip="Use Taurochole" -->
+                        <!--         Click="UseTaurochole_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Taurochole.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                         
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseZoe"
-                                ToolTip="Use Zoe"
-                                Click="UseZoe_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Zoe.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseZoe" -->
+                        <!--         ToolTip="Use Zoe" -->
+                        <!--         Click="UseZoe_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Zoe.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                         
-                        <Button Style="{StaticResource ImageButton}"
-                                Width="40" Height="40" Margin="6,2,6,2" Name="UseKerachole"
-                                ToolTip="Use Kerachole"
-                                Click="UseKerachole_OnClick">
-                            <Image Source="../../Resources/Spells/Sage/Kerachole.png"
-                                   Stretch="Uniform" />
-                        </Button>
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseKerachole" -->
+                        <!--         ToolTip="Use Kerachole" -->
+                        <!--         Click="UseKerachole_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Kerachole.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
+                        
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseHaima" -->
+                        <!--         ToolTip="Use Haima" -->
+                        <!--         Click="UseHaima_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Haima.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
+                        
+                        <!-- <Button Style="{StaticResource ImageButton}" -->
+                        <!--         Width="40" Height="40" Margin="6,2,6,2" Name="UseHolos" -->
+                        <!--         ToolTip="Use Holos" -->
+                        <!--         Click="UseHolos_OnClick"> -->
+                        <!--     <Image Source="../../Resources/Spells/Sage/Holos.png" -->
+                        <!--            Stretch="Uniform" /> -->
+                        <!-- </Button> -->
                     </StackPanel>
                     
                 </WrapPanel>

@@ -861,6 +861,8 @@ xcopy "$(SolutionDir)))\Output" "C:\Users\Black\Documents\Rebornbuddy64\Routines
     <Compile Include="Setting\Setting\BardSettings.cs" />
     <Compile Include="Setting\Setting\GeneralSettings.cs" />
     <Compile Include="Setting\Setting\VersionSetting.cs" />
+    <Resource Include="Resources\Spells\Sage\Diagnosis.png" />
+    <Resource Include="Resources\Spells\Sage\Prognosis.png" />
     <Resource Include="Resources\Spells\Ast\BeneficII.png" />
     <Resource Include="Resources\Spells\GunBreaker\Camouflage.png" />
     <Resource Include="Resources\Spells\GunBreaker\Nebula.png" />

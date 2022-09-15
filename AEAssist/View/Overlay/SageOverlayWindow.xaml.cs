@@ -158,5 +158,15 @@ namespace AEAssist.View.Overlay
         {
             OverlayManager.OverlayManager.Instance.Close();
         }
+
+        private void UseDiagnosis_OnClick(object sender, RoutedEventArgs e)
+        {
+            AIRoot.GetBattleData<BattleData>().NextGcdSpellId = SpellsDefine.Diagnosis.GetSpellEntity();
+        }
+
+        private void UsePrognosis_OnClick(object sender, RoutedEventArgs e)
+        {
+            AIRoot.GetBattleData<BattleData>().NextGcdSpellId = SpellsDefine.Prognosis.GetSpellEntity();
+        }
     }
 }
