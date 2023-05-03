@@ -23,30 +23,35 @@ namespace AEAssist.Helper
             DexPotions.Clear();
             DexPotions.Add(new PotionData
             {
+                ID = PLACEHOLDER,
+                Name = "Grade 8 Dex"
+            });
+            DexPotions.Add(new PotionData
+            {
                 ID = 37841,
-                Name = "Grade 7 Dex/7级巧力之幻药"
+                Name = "Grade 7 Dex"
             });
             DexPotions.Add(new PotionData
             {
                 ID = 36110,
-                Name = "Grade 6 Dex/6级巧力之幻药"
+                Name = "Grade 6 Dex"
             });
             DexPotions.Add(new PotionData
             {
                 ID = 36105,
-                Name = "Grade 5 Dex/5级巧力之幻药"
+                Name = "Grade 5 Dex"
             });
 
             DexPotions.Add(new PotionData
             {
                 ID = 31894,
-                Name = "Grade 4 Dex/4级巧力之幻药"
+                Name = "Grade 4 Dex"
             });
 
             DexPotions.Add(new PotionData
             {
                 ID = 29493,
-                Name = "Grade 3 Dex/3级巧力之幻药"
+                Name = "Grade 3 Dex"
             });
 
 
@@ -54,84 +59,99 @@ namespace AEAssist.Helper
                 StrPotions = new List<PotionData>();
             StrPotions.Add(new PotionData
             {
+                ID = PLACEHOLDER,
+                Name = "Grade 8 Str"
+            });
+            StrPotions.Add(new PotionData
+            {
                 ID = 37840,
-                Name = "Grade 7 Str/7级刚力之幻药"
+                Name = "Grade 7 Str"
             });
             StrPotions.Add(new PotionData
             {
                 ID = 36109,
-                Name = "Grade 6 Str/6级刚力之幻药"
+                Name = "Grade 6 Str"
             });
             StrPotions.Add(new PotionData
             {
                 ID = 36104,
-                Name = "Grade 5 Str/5级刚力之幻药"
+                Name = "Grade 5 Str"
             });
             StrPotions.Add(new PotionData
             {
                 ID = 31893,
-                Name = "Grade 4 Str/4级刚力之幻药"
+                Name = "Grade 4 Str"
             });
             StrPotions.Add(new PotionData
             {
                 ID = 29492,
-                Name = "Grade 3 Str/3级刚力之幻药"
+                Name = "Grade 3 Str"
             });
 
             if (MindPotions == null)
                 MindPotions = new List<PotionData>();
+             MindPotions.Add(new PotionData
+            {
+                ID = PLACEHOLDER,
+                Name = "Grade 8 Mind"
+            });
             MindPotions.Add(new PotionData
             {
                 ID = 37844,
-                Name = "Grade 7 Mind/7级意力"
+                Name = "Grade 7 Mind"
             });
             MindPotions.Add(new PotionData
             {
                 ID = 36113,
-                Name = "Grade 6 Mind/6级意力"
+                Name = "Grade 6 Mind"
             });
             MindPotions.Add(new PotionData
             {
                 ID = 36108,
-                Name = "Grade 5 Mind/5级意力"
+                Name = "Grade 5 Mind"
             });
             MindPotions.Add(new PotionData
             {
                 ID = 31897,
-                Name = "Grade 4 Mind/4级意力"
+                Name = "Grade 4 Mind"
             });
             MindPotions.Add(new PotionData
             {
                 ID = 29496,
-                Name = "Grade 3 Mind/3级意力"
+                Name = "Grade 3 Mind"
             });
 
             if (IntPotions == null)
                 IntPotions = new List<PotionData>();
             IntPotions.Add(new PotionData
             {
+                ID = PLACEHPOLDER,
+                Name = "Grade 8 INT"
+            });
+            IntPotions.Add(new PotionData
+            {
                 ID = 37843,
-                Name = "Grade 7 INT/7级智力"
+                Name = "Grade 7 INT"
             });
             IntPotions.Add(new PotionData
             {
                 ID = 36112,
-                Name = "Grade 6 INT/6级智力"
+                Name = "Grade 6 INT"
             });
             IntPotions.Add(new PotionData
             {
                 ID = 36107,
-                Name = "Grade 5 INT/5级智力"
+                Name = "Grade 5 INT"
             });
             IntPotions.Add(new PotionData
             {
                 ID = 31896,
-                Name = "Grade 4 INT/4级智力"
+                Name = "Grade 4 INT"
             });
             IntPotions.Add(new PotionData
             {
                 ID = 29495,
-                Name = "Grade 3 INT/3级智力"
+                Name = "Grade 3 INT"
             });
 
         }
