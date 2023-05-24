@@ -23,7 +23,7 @@ namespace AEAssist.Helper
             DexPotions.Clear();
             DexPotions.Add(new PotionData
             {
-                ID = PLACEHOLDER,
+                ID = 39728,
                 Name = "Grade 8 Dex"
             });
             DexPotions.Add(new PotionData
@@ -59,7 +59,7 @@ namespace AEAssist.Helper
                 StrPotions = new List<PotionData>();
             StrPotions.Add(new PotionData
             {
-                ID = PLACEHOLDER,
+                ID = 39727,
                 Name = "Grade 8 Str"
             });
             StrPotions.Add(new PotionData
@@ -92,7 +92,7 @@ namespace AEAssist.Helper
                 MindPotions = new List<PotionData>();
              MindPotions.Add(new PotionData
             {
-                ID = PLACEHOLDER,
+                ID = 39731,
                 Name = "Grade 8 Mind"
             });
             MindPotions.Add(new PotionData
@@ -125,7 +125,7 @@ namespace AEAssist.Helper
                 IntPotions = new List<PotionData>();
             IntPotions.Add(new PotionData
             {
-                ID = PLACEHPOLDER,
+                ID = 39730,
                 Name = "Grade 8 INT"
             });
             IntPotions.Add(new PotionData
