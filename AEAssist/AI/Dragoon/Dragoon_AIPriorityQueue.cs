@@ -13,13 +13,13 @@ namespace AEAssist.AI.Dragoon
         {
             new DragoonGCD_FangAndClaw(),//龙爪龙牙
             new DragoonGCD_WheelingThrust(),//龙尾大回旋
-            new DragoonGCD_Base()//基础连击-樱花连
+            new DragoonGCD_Base(),//基础连击-樱花连
         };
 
         public List<IAIHandler> AbilityQueue { get; } = new List<IAIHandler>()
         {
             new DragoonAbility_Base(),
-            new DragoonAbility_UsePotion()
+            new DragoonAbility_UsePotion(),
         };
         public async Task<bool> UsePotion()
         {
