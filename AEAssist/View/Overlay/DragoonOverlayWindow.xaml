@@ -52,7 +52,7 @@
                                   Style="{StaticResource CheckBoxOverlayCustomToggle}"
                                   IsChecked="{Binding UseAOE,Mode=TwoWay}" />
                         <CheckBox HorizontalContentAlignment="Center"
-                                  Content="全自动模式"
+                                  Content="EarlyDecision"
                                   Style="{StaticResource CheckBoxOverlayCustomToggle}"
                                   IsChecked="{Binding DragoonSettings.EarlyDecisionMode,Mode=TwoWay}" />
                         <CheckBox HorizontalContentAlignment="Center"
