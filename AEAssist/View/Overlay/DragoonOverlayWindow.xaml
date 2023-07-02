@@ -46,7 +46,10 @@
                             Content="{Binding HotkeySetting.StopBtnName}"
                             Style="{StaticResource CheckBoxOverlayCustomToggle}"
                             IsChecked="{Binding Stop,Mode=TwoWay}" />
-
+                        <CheckBox HorizontalContentAlignment="Center"
+                                  Content="{Binding Language.Toggle_Potion}"
+                                  Style="{StaticResource CheckBoxOverlayCustomToggle}"
+                                  IsChecked="{Binding GeneralSettings.UsePotion,Mode=TwoWay}" />
                         <CheckBox HorizontalContentAlignment="Center"
                                   Content="AOE"
                                   Style="{StaticResource CheckBoxOverlayCustomToggle}"
