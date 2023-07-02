@@ -19,6 +19,7 @@ namespace AEAssist.AI.Dragoon
         public List<IAIHandler> AbilityQueue { get; } = new List<IAIHandler>()
         {
             new DragoonAbility_Base()
+            new DragoonAbility_UsePotion(),
         };
         public async Task<bool> UsePotion()
         {
