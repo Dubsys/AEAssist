@@ -20,9 +20,9 @@ namespace AEAssist.AI.Dragoon
         {
             new DragoonAbility_Base()
         };
-        public Task<bool> UsePotion()
+        public async Task<bool> UsePotion()
         {
-            return Task.FromResult(false);
+            return await PotionHelper.ForceUsePotion(SettingMgr.GetSetting<GeneralSettings>().StrPotionId);
         }
     }
 }
